@@ -1,9 +1,3 @@
-// author: Shlomo Templeman.
-// Date: 7/09/2022.
-// approved: Adir Sarossi.
-
-package il.co.ilrd.threadpool;
-import il.co.ilrd.designpatterns.waitablepq.WaitableCondPQ;
 
 import java.time.LocalDateTime;
 import java.util.LinkedList;
@@ -13,7 +7,7 @@ import java.util.concurrent.*;
 public class ThreadPool implements Executor {
     private final Semaphore pauseSemaphore = new Semaphore(0);
     private final List<ThreadIMP> threads = new LinkedList<>();
-    private final WaitableCondPQ<TaskIMP<?>> taskQueue = new WaitableCondPQ<>();
+    private final WaitablePQ<TaskIMP<?>> taskQueue = new WaitablePQ<>();
     private volatile boolean isShutDown = false;
     private volatile boolean isPuased = false;
 

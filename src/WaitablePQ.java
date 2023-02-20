@@ -1,7 +1,3 @@
-// aurter
-
-
-package il.co.ilrd.threadpool;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
